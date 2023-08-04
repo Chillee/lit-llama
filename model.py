@@ -55,6 +55,7 @@ class LLaMAConfig:
     n_layer: int = 32
     n_head: int = 32
     n_embd: int = 4096
+    quantize: bool = False
 
     def __post_init__(self):
         if self.padded_vocab_size is None:
@@ -72,20 +73,61 @@ llama_configs = {
     "65B": dict(n_layer=80, n_head=64, n_embd=8192),
 }
 
+
+def quantize_uint8(x: torch.Tensor, scale_dtype=torch.bfloat16) -> Tuple[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+    x_min = x.min(dim=-1).values
+    x_max = x.max(dim=-1).values
+    scale = (x_max - x_min) / 255
+    x_quantized = ((x - x_min.unsqueeze(-1)) / scale.unsqueeze(-1)).to(torch.uint8)
+
+    return x_quantized, (scale, x_min)
+
+
+def dequantize_uint8(x: torch.Tensor, coefs: Tuple[torch.Tensor, torch.Tensor], dtype=torch.bfloat16) -> torch.Tensor:
+    scale, x_min = coefs
+    x_quantized = x.to(scale.dtype)
+    x_deq = x_quantized * scale.unsqueeze(-1).expand(x_quantized.shape) + x_min.unsqueeze(-1).expand(x_quantized.shape)
+    return x_deq.to(dtype)
+
+
 class KVCache(nn.Module):
-    def __init__(self, max_batch_size, max_seq_length, n_heads, head_size, device='cuda', dtype=torch.bfloat16):
+    def __init__(self, max_batch_size, max_seq_length, n_heads, head_size, device='cuda', dtype=torch.bfloat16, coef_dtype=torch.bfloat16):
         super().__init__()
-        cache_shape = (max_batch_size, n_heads, max_seq_length, head_size)
-        self.k_cache = torch.nn.Parameter(torch.zeros(cache_shape, device=device, dtype=dtype))
-        self.v_cache = torch.nn.Parameter(torch.zeros(cache_shape, device=device, dtype=dtype))
+        if dtype == torch.bfloat16:
+            last_dim = head_size
+        elif dtype == torch.uint8:
+            last_dim = head_size
+        else:
+            raise NotImplementedError(f"Unsupported dtype for KV cache {dtype}")
+        cache_shape = (max_batch_size, n_heads, max_seq_length, last_dim)
+        self.k_cache = torch.nn.Parameter(torch.zeros(cache_shape, device=device, dtype=dtype), requires_grad=False)
+        self.v_cache = torch.nn.Parameter(torch.zeros(cache_shape, device=device, dtype=dtype), requires_grad=False)
+
+        if self.k_cache.dtype == torch.uint8:
+            coefs_shape = cache_shape[:-1]
+            self.k_cache_scale = torch.nn.Parameter(torch.zeros(coefs_shape, device=device, dtype=coef_dtype), requires_grad=False)
+            self.v_cache_scale = torch.nn.Parameter(torch.zeros(coefs_shape, device=device, dtype=coef_dtype), requires_grad=False)
+            self.k_cache_min = torch.nn.Parameter(torch.zeros(coefs_shape, device=device, dtype=coef_dtype), requires_grad=False)
+            self.v_cache_min = torch.nn.Parameter(torch.zeros(coefs_shape, device=device, dtype=coef_dtype), requires_grad=False)
+
 
     def update(self, input_pos, k_val, v_val):
         # input_pos: [S], k_val: [B, H, S, D]
         assert input_pos.shape[0] == k_val.shape[2]
+        if self.k_cache.dtype == torch.uint8:
+            k_val, k_coefs = quantize_uint8(k_val)
+            v_val, v_coefs = quantize_uint8(v_val)
+
+            self.k_cache_scale[:, :, input_pos] = k_coefs[0]
+            self.k_cache_min[:, :, input_pos] = k_coefs[1]
+            self.v_cache_scale[:, :, input_pos] = v_coefs[0]
+            self.v_cache_min[:, :, input_pos] = v_coefs[1]
 
         self.k_cache[:, :, input_pos] = k_val
         self.v_cache[:, :, input_pos] = v_val
 
+        if self.k_cache.dtype == torch.uint8:
+            return dequantize_uint8(self.k_cache, (self.k_cache_scale, self.k_cache_min)), dequantize_uint8(self.v_cache, (self.v_cache_scale, self.v_cache_min))
         return self.k_cache, self.v_cache
 
 class KVCacheAggregator(nn.Module):
@@ -94,8 +136,7 @@ class KVCacheAggregator(nn.Module):
         self.kv_caches = nn.ModuleList([])
 
     def initialize(self,layers, max_batch_size, max_seq_length, n_heads, head_size, device='cuda', dtype=torch.bfloat16):
-        cache_shape = (max_batch_size, n_heads, max_seq_length, head_size)
-        self.kv_caches = nn.ModuleList([KVCache(max_batch_size, max_seq_length, n_heads, head_size) for _ in range(layers)])
+        self.kv_caches = nn.ModuleList([KVCache(max_batch_size, max_seq_length, n_heads, head_size, dtype=dtype) for _ in range(layers)])
 
     def __getitem__(self, idx):
         return self.kv_caches[idx]
@@ -129,7 +170,7 @@ class LLaMA(nn.Module):
 
         self.max_seq_length = max_seq_length
         self.max_batch_size = max_batch_size
-        self.kv_caches.initialize(layers=self.config.n_layer, max_batch_size=max_batch_size, max_seq_length=max_seq_length, n_heads=self.config.n_head, head_size=head_size)
+        self.kv_caches.initialize(layers=self.config.n_layer, max_batch_size=max_batch_size, max_seq_length=max_seq_length, n_heads=self.config.n_head, head_size=head_size, dtype=dtype)
 
         self.rope_cache = build_rope_cache(
             seq_len=self.config.block_size,

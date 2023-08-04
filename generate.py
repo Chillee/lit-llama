@@ -75,6 +75,7 @@ def generate(
     temperature: float = 1.0,
     top_k: Optional[int] = None,
     eos_id: Optional[int] = None,
+    quantize: bool = False,
 ) -> torch.Tensor:
     """Takes a conditioning sequence (prompt) as input and continues to generate as many tokens as requested.
 
@@ -94,7 +95,8 @@ def generate(
     T_new = T + max_new_tokens
     if max_seq_length is None:
         max_seq_length = min(T_new, model.config.block_size)
-    model.setup_caches(max_batch_size=1, max_seq_length=max_seq_length)
+    cache_dtype = torch.uint8 if quantize else torch.bfloat16
+    model.setup_caches(max_batch_size=1, max_seq_length=max_seq_length, dtype=cache_dtype)
 
     device, dtype = prompt.device, prompt.dtype
     # create an empty tensor of the expected final shape and fill in the current tokens
@@ -141,6 +143,7 @@ def main(
     compile: bool = True,
     profile: Optional[Path] = None,
     max_optimize: bool = False,
+    quantize: bool = False,
 ) -> None:
     """Generates text samples based on a pre-trained LLaMA model and tokenizer.
 
@@ -193,6 +196,10 @@ def main(
         # Apparently compiling only prefill but not decode gives bunk results???
         if max_optimize:
             prefill = torch.compile(prefill, mode="reduce-overhead")
+            #global prefill #sample, model_compiled
+            # model_compiled = torch.compile(model)
+            #sample = torch.compile(sample)
+            #prefill = torch.compile(prefill)#, mode="reduce-overhead")
             torch._inductor.config.coordinate_descent_tuning = True
 
 
@@ -202,7 +209,7 @@ def main(
         import contextlib
         prof = contextlib.nullcontext() if i != num_samples - 1 or not profile else torch.profiler.profile()
         with prof:
-            y = generate(model, encoded, max_new_tokens, temperature=temperature, top_k=top_k)
+            y = generate(model, encoded, max_new_tokens, temperature=temperature, top_k=top_k, quantize=quantize)
         if hasattr(prof, "export_chrome_trace"):
             prof.export_chrome_trace(f"{profile}.json")
         torch.cuda.synchronize()

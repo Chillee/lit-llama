@@ -12,8 +12,8 @@ import torch
 wd = Path(__file__).parent.parent.resolve()
 sys.path.append(str(wd))
 
-from ..model import LLaMA, LLaMAConfig
-from ..utils import EmptyInitOnDevice, lazy_load, incremental_save
+from model import LLaMA, LLaMAConfig
+from utils import EmptyInitOnDevice, lazy_load, incremental_save
 
 
 @torch.no_grad()

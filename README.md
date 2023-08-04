@@ -40,3 +40,33 @@ Bandwidth achieved: 1439.13 GB/s
 ```
 
 Note: Running on an A100 80GB, albeit power-limited to 330 watts. Empirically, seems like peak bandwidth is about 1700 GB/s.
+
+WIP: int8 KV-cache quantization
+
+With quantization and no compilation the performance is very low
+```
+time python generate.py --prompt "Hello, my name is" --max_new_tokens 200 --num_samples 10 --fake false  --compile false --quantize true
+
+Time for inference 2: 78.11 sec total, 2.56 tokens/sec
+Bandwidth achieved: 34.51 GB/s
+```
+
+Compilation improves that by a lot. With quantization and compilation:
+```
+time python generate.py --prompt "Hello, my name is" --max_new_tokens 200 --num_samples 10 --fake false  --compile true --quantize true
+
+Time for inference 10: 2.72 sec total, 73.43 tokens/sec
+Bandwidth achieved: 989.59 GB/s
+Memory used: 14.01 GB
+```
+
+For comparison, without quantization, but with compilation:
+```
+time python generate.py --prompt "Hello, my name is" --max_new_tokens 200 --num_samples 10 --fake false  --compile true --quantize false
+
+Time for inference 10: 2.48 sec total, 80.78 tokens/sec
+Bandwidth achieved: 1088.72 GB/s
+Memory used: 13.84 GB
+```
+
+It is not yet clear why quantization increases, and not decreases, memory usage
