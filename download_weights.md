@@ -1,38 +1,17 @@
 ## Downloading pretrained weights
 
-### OpenLLaMA
-
-OpenLM Research has released **Apache 2.0 licensed** weights obtained by training LLaMA on the 1.2 trillion token open-source [RedPajama](https://github.com/togethercomputer/RedPajama-Data) dataset.
-
-Weights were released in preview on intermediate number of tokens (1T at the time of writing). In order to get them do:
+## Official LLAMA 2 weights
 
 ```bash
-# Make sure you have git-lfs installed (https://git-lfs.com): git lfs install
-git clone https://huggingface.co/openlm-research/open_llama_7b checkpoints/open-llama/7B
+python scripts/download.py --repo_id meta-llama/Llama-2-7b-chat-hf --token your_hf_token
 ```
 
-Or if you don't have `git-lfs` installed:
-
-```bash
-python scripts/download.py --repo_id openlm-research/open_llama_7b --local_dir checkpoints/open-llama/7B
-```
-
-Once downloaded, you should have a folder like this:
-
-```text
-checkpoints/open-llama/
-└── 7B
-    ├── ...
-    ├── pytorch_model-00001-of-00002.bin
-    ├── pytorch_model-00002-of-00002.bin
-    ├── pytorch_model.bin.index.json
-    └── tokenizer.model
-```
+Get your token here https://huggingface.co/settings/tokens
 
 Convert the weights to the Lit-LLaMA format:
 
 ```bash
-python scripts/convert_hf_checkpoint.py --checkpoint_dir checkpoints/open-llama/7B --model_size 7B
+python scripts/convert_hf_checkpoint.py --checkpoint_dir checkpoints/meta-llama/Llama-2-7b-chat-hf
 ```
 
 ### Original Meta weights

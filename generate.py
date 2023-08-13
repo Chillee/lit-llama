@@ -21,6 +21,8 @@ torch._inductor.config.triton.unique_kernel_names = True
 wd = Path(__file__).parent.parent.resolve()
 sys.path.append(str(wd))
 
+# torch.set_default_device("cuda")
+
 from model import LLaMA
 from tokenizer import Tokenizer
 from utils import lazy_load, llama_model_lookup
@@ -172,7 +174,7 @@ def main(
             model = LLaMA.from_name(name)
 
         if not fake:
-            model.load_state_dict(checkpoint)
+            model.load_state_dict(checkpoint.get("model", checkpoint))
     print(f"Time to load model: {time.time() - t0:.02f} seconds.", file=sys.stderr)
 
 
@@ -192,7 +194,7 @@ def main(
 
         # Apparently compiling only prefill but not decode gives bunk results???
         if max_optimize:
-            prefill = torch.compile(prefill, mode="reduce-overhead")
+            # prefill = torch.compile(prefill, mode="reduce-overhead")
             torch._inductor.config.coordinate_descent_tuning = True
 
 
