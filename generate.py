@@ -27,6 +27,25 @@ from model import LLaMA
 from tokenizer import Tokenizer
 from utils import lazy_load, llama_model_lookup
 
+def adjust_keys(state_dict):
+    new_state_dict = {}
+    for k, v in state_dict.items():
+        new_key = k
+        new_key = new_key.replace("norm_1.weight", "rms_1.scale")
+        new_key = new_key.replace("norm_2.weight", "rms_2.scale")
+        new_key = new_key.replace("attn.attn.weight", "attn.c_attn.weight")
+        new_key = new_key.replace("mlp.fc_1.weight", "mlp.c_fc1.weight")
+        new_key = new_key.replace("mlp.fc_2.weight", "mlp.c_fc2.weight")
+        new_key = new_key.replace("mlp.proj.weight", "mlp.c_proj.weight")
+        new_key = new_key.replace("ln_f.weight", "ln_f.scale")
+        new_key = new_key.replace("attn.proj.weight", "attn.c_proj.weight")
+
+        # Add more replacements if needed
+        new_state_dict[new_key] = v
+    return new_state_dict
+
+
+
 def fast_multinomial_sample_one(probs_sort):
     q = torch.empty_like(probs_sort).exponential_(1)
     return torch.argmax(probs_sort / q, dim=-1, keepdim=True)
@@ -137,8 +156,8 @@ def main(
     max_new_tokens: int = 50,
     top_k: int = 200,
     temperature: float = 0.8,
-    checkpoint_path: Path = Path("checkpoints/lit-llama/7B/lit-llama.pth"),
-    tokenizer_path: Path = Path("checkpoints/lit-llama/tokenizer.model"),
+    checkpoint_path: Path = Path("checkpoints/meta-llama/Llama-2-7b-chat-hf/lit_model.pth"),
+    tokenizer_path: Path = Path("checkpoints/meta-llama/Llama-2-7b-chat-hf/tokenizer.model"),
     fake: bool = False,
     compile: bool = True,
     profile: Optional[Path] = None,
@@ -174,7 +193,8 @@ def main(
             model = LLaMA.from_name(name)
 
         if not fake:
-            model.load_state_dict(checkpoint.get("model", checkpoint))
+            adjusted_checkpoint = adjust_keys(checkpoint)
+            model.load_state_dict(adjusted_checkpoint)
     print(f"Time to load model: {time.time() - t0:.02f} seconds.", file=sys.stderr)
 
 
