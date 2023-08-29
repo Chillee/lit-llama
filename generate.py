@@ -13,7 +13,10 @@ import torch._dynamo.config
 torch._dynamo.config.automatic_dynamic_shapes = True
 import torch._inductor.config
 torch._inductor.config.triton.unique_kernel_names = True
-
+torch._inductor.config.epilogue_fusion = False
+torch._inductor.config.triton.cudagraphs = True
+torch._dynamo.config.cache_size_limit = 32000
+from torch.profiler import ProfilerActivity
 # Enable this to bring perf from 93 tok/s => 103 tok/s
 # increases compile time due to coord descent autotuning + compiling both prefill and decode steps
 
@@ -22,6 +25,7 @@ wd = Path(__file__).parent.parent.resolve()
 sys.path.append(str(wd))
 
 from model import LLaMA
+from quantize import apply_dynamic_quant, replace_with_custom_fn_if_matches_filter, DynamicallyPerAxisQuantizedLinear
 from tokenizer import Tokenizer
 from utils import lazy_load, llama_model_lookup
 
@@ -127,7 +131,7 @@ def generate(
 
     return seq
 
-
+@torch.inference_mode()
 def main(
     prompt: str = "Hello, my name is",
     prompt_synthetic: Optional[int] = None,
@@ -139,6 +143,7 @@ def main(
     tokenizer_path: Path = Path("checkpoints/lit-llama/tokenizer.model"),
     fake: bool = False,
     compile: bool = True,
+    dynamic_quant: int = 0,
     profile: Optional[Path] = None,
     max_optimize: bool = False,
 ) -> None:
@@ -173,8 +178,14 @@ def main(
 
         if not fake:
             model.load_state_dict(checkpoint)
-    print(f"Time to load model: {time.time() - t0:.02f} seconds.", file=sys.stderr)
+        if dynamic_quant:
+            torch._inductor.config.max_autotune_gemm = True
+            torch._inductor.config.use_mixed_mm = True
+            if dynamic_quant==1:
+                apply_dynamic_quant(model)
+        print(model)
 
+    print(f"Time to load model: {time.time() - t0:.02f} seconds.", file=sys.stderr)
 
     model.eval()
 
@@ -192,7 +203,7 @@ def main(
 
         # Apparently compiling only prefill but not decode gives bunk results???
         if max_optimize:
-            prefill = torch.compile(prefill, mode="reduce-overhead")
+            # prefill = torch.compile(prefill, mode="reduce-overhead")
             torch._inductor.config.coordinate_descent_tuning = True
 
 

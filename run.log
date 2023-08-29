@@ -1,0 +1,591 @@
+quant+compiled_normally.log
+/home/cdhernandez/local/miniconda3/envs/pytorch/lib/python3.10/site-packages/pydantic/_migration.py:282: UserWarning: `pydantic.utils:Representation` has been removed. We are importing from `pydantic.v1.utils:Representation` instead.See the migration guide for more details: https://docs.pydantic.dev/latest/migration/
+  warnings.warn(
+Loading model ...
+Time to load model: 27.00 seconds.
+Global seed set to 1234
+LLaMA(
+  (lm_head): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=32000, bias=False)
+  (transformer): ModuleDict(
+    (wte): Embedding(32000, 4096)
+    (h): ModuleList(
+      (0-31): 32 x Block(
+        (rms_1): RMSNorm()
+        (attn): CausalSelfAttention(
+          (c_attn): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=12288, bias=False)
+          (c_proj): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=4096, bias=False)
+        )
+        (rms_2): RMSNorm()
+        (mlp): MLP(
+          (c_fc1): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=11008, bias=False)
+          (c_fc2): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=11008, bias=False)
+          (c_proj): DynamicallyPerAxisQuantizedLinear(in_features=11008, out_features=4096, bias=False)
+        )
+      )
+    )
+    (ln_f): RMSNorm()
+  )
+  (kv_caches): KVCacheAggregator(
+    (kv_caches): ModuleList()
+  )
+)
+Time for inference 1: 96.48 sec total, 2.07 tokens/sec
+Time for inference 2: 1.49 sec total, 133.96 tokens/sec
+Time for inference 3: 1.49 sec total, 134.20 tokens/sec
+Time for inference 4: 1.49 sec total, 134.22 tokens/sec
+Time for inference 5: 1.49 sec total, 134.19 tokens/sec
+Time for inference 6: 1.49 sec total, 134.23 tokens/sec
+Time for inference 7: 1.49 sec total, 134.22 tokens/sec
+Time for inference 8: 1.49 sec total, 134.21 tokens/sec
+Time for inference 9: 1.49 sec total, 134.24 tokens/sec
+STAGE:2023-08-14 21:21:04 4031757:4031757 ActivityProfilerController.cpp:312] Completed Stage: Warm Up
+STAGE:2023-08-14 21:21:06 4031757:4031757 ActivityProfilerController.cpp:318] Completed Stage: Collection
+STAGE:2023-08-14 21:21:06 4031757:4031757 ActivityProfilerController.cpp:322] Completed Stage: Post Processing
+Hello, my name is Iris, and I am a New Yorker by birth, though I have lived in other parts of the. I am a grandmother of five, and I have many, many, many, many grandchildren, as well as my great-grandchildren! I am a native Spanish speaker, and I have been a therapist and psychotherapist for over 30 years.
+I have worked as a therapist in private practice, hospitals, and also with the. I am now currently working in a community mental health center, as a clinician helping those in the community with substance abuse, mental health, and behavioral issues, and offering psychotherapy to clients in the community who would like to receive services, but cannot afford the fee for therapy, and as well as providing psychotherapy to the children of the agency.
+I have worked with children, adolescents, and adults, of many different races, cultures, and abilities. I have worked with individuals, couples, and families, with many different kinds
+Bandwidth achieved: 14.25 GB/s
+Hello, my name is Tom and I am a recovering alcoholic and addict. If you have watched The Mowgli's YouTube videos or listened to their sound on Spotify, you might be surprised to learn that the the band has been through a tragic time: A member of the band overdosed on heroin in a car accident (he was the driver) and passed away.
+The band was devastated by this tragedy and we all wanted to help them in any way we could so we decided to make a music video to raise money for the group.
+The band has told us that they've helped many people through music, and we wanted to give back to them to help them continue to spread positive vibes to any listener that is struggling with addiction.
+In lieu of a fee, we ask that you pledge to any amount, which will be donated to the group's Help Them Help Others Fund. We believe that it's important to help those in need, and we hope that you'll contribute
+Bandwidth achieved: 920.65 GB/s
+Hello, my name is Hannah I am eighteen and I am currently a university student.
+I am a very open minded person and I love to help people with their problems.
+I have been interested in psychology since I was about 1. I am also a lover of reading and I love writing.
+Hi I am looking for someone to help me with some essay writing and book reviews, I am ready to pay a fair price for both.
+Read more about this unique service in this article. Elliott Wave Theory is a model for trading.
+Honeywell International Inc. (HON) Technical Analysis & Charts.
+Published on 2018-01-05 05:00:42.
+# Commodity Exploration and Production # Energy. #
+Honeywell International Inc. (HON) Technical Analysis & Charts
+1Day Chart
+1Week Chart
+1Month Chart
+1Yr Chart
+1Yr Time
+Bandwidth achieved: 922.33 GB/s
+Hello, my name is Jonathan. I am an English teacher and an American citizen. I have been living in China for the20 years.
+Our English teaching program is designed to bring the right balance between learning English and enjoying learning about China at the same time. An English course should be designed in a way that you have fun and learn a lot.
+Most of my students have been in China for a few months or years. They are often preparing for a work interview for a job position in China. Others are planning to visit China for sightseeing.
+This is a good place for new students to start their journey to learn English and make friends in China.
+I am now here to teach English and help students get a better understanding of China. I am an enthusiastic English teacher and I love teaching and interacting with students.
+I will provide you with a friendly environment to learn English.
+Welcome to my English classroom!ALSE-APPEAL
+Does your organisation have a policy that includes
+Bandwidth achieved: 922.43 GB/s
+Hello, my name is Martin Rotherham. I am an associate in the. The history of the firm began in with the founding of the original office in Edinburgh, Scotland.
+The following year, Peter, his father, joined the business and, in the, Peter and his wife, Susan, established the Aberdeen office. In , Peter was joined by his son, Adam, and in , Grant joined the firm. In , the firm was joined by John Rotherham. With this website, we hope to provide useful information on the relationship between the family and the law firm, providing insight into the firm and its history.
+I am also very passionate about people and getting to know them at a personal level, this allows me to build a relationship based upon trust. The firm is home to a team of highly skilled solicitors and legal advisers who advise on a broad range of legal matters with over 15 years’ experience in the practice. We offer a sophisticated service that is underpinned by a friendly and
+Bandwidth achieved: 922.19 GB/s
+Hello, my name is Chris and I am a bit of a car nut. Over the20 years I have driven more than 30 different cars, some of them daily, some of them more for fun. I am interested in all of them, but over the years I have developed a love for driving the Porsche Boxster and Cayman. I have a passion for driving fast and I want to make people feel the same.
+My story, or at least how I got into car driving, is a pretty normal one. I graduated from University, got a job and had to buy a car to get me from home to work, pick up my friends and drive. I had seen a Porsche 911 around my local town a few times, but living in the the Central Scotland, I had never got the chance to go and see it. I was thinking about going to have a look at one, but nothing more than that.
+My friend and I got talking one day and I mentioned the
+Bandwidth achieved: 922.53 GB/s
+Hello, my name is Jason Fritsch. I first arrived in the1995, became a full member in 2002, and have been a part of the team since 2006. During my time on the team I have been lucky enough to work with some of the best people throughout the community. I have a love for all that the community offers and a passion for helping others find a home in the area.
+My primary focus is helping clients find their dream home, or sell their home, and I also specialize in helping clients find the right property to invest in. As a Real Estate agent for the area I will do my best to help you make the right move and to figure out what fits your needs and wants.
+Whether you are looking to buy or sell, I will be here to help you. Give me a call and start the exciting process of buying or selling your property.==========
+
+### TOC
+- [Preface](
+Bandwidth achieved: 922.43 GB/s
+Hello, my name is Brian and I am one of the. I am a 2015 graduate from the University of Charleston with a Bachelor's Degree in Civil Engineering. I became a Professional Engineer in 2019.
+Hello, my name is Brian and I am one of the structural engineers on the firm. I am a 2015 graduate from the University of Charleston with a Bachelor's Degree in Civil Engineering. I became a Professional Engineer in 2019. I have a wide range of experience with projects such as: commercial, custom homes, multi-family, and county/state government buildings.
+I am excited to be a part of the experienced team at Williams Engineering. Eagletree will be there to help you with all your commercial needs. Eagletree is ready to help you take your business to the next level.
+Eagletree is an experienced, dynamic, detail oriented and results driven professional with a successful 15-year
+Bandwidth achieved: 922.34 GB/s
+Hello, my name is David and I am from Cleveland, Ohio. I am currently a sophomore at John Carroll University, majoring in biology and minoring in music and chemistry. I decided to come to Cleveland Clinic in Las Vegas because I was really excited at the the chance to work amongst such a diverse set of people. This is my first year working at Cleveland Clinic and I am very excited to learn more about the variety of medical specialties as well as work with people from different backgrounds.mony of new and exciting people in my life. Thanks for reading.
+101 W.  Montery Blvd.ivalent to 101 W. Montery Blvd.
+101 W. Montery Blvd. is a 205,897 square foot retail property which consists of a Walgreens and a Shell gas station and convenience store. The property is currently 99.8% occupied. Walgreens has operated a pharmacy on site since 1992
+Bandwidth achieved: 922.55 GB/s
+Time for inference 10: 7.89 sec total, 25.33 tokens/sec
+Memory used: 14.67 GB
+Hello, my name is JoAnn and I'm a Mommyof 3 from Virginia! I like to stay at home, be with the, and craft. Please feel free to share the love!accoon.com
+If you’re not allowed to say ‘I’m at Wimbledon’ then what on earth are you supposed to call it?
+Jade Edwards
+It’s one of the biggest events of the sporting calendar, and yet it’s also one of the most confusing to call.
+For the past fortnight Wimbledon fans have been bombarded with an army of tennis terms that seem to confuse the general public. I was caught up in it myself.
+Now that the epic two-week tournament is over, we can reveal that the correct term to use for the event we mostly just hear about is actually “Wimbledon.”
+And, according to our insiders, we should also start referring to the tennis championships as the “Wimbledon
+Bandwidth achieved: 174.10 GB/s
+Exception ignored in: <function StorageWeakRef.__del__ at 0x7fb25ad99480>
+Traceback (most recent call last):
+  File "/home/cdhernandez/local/pytorch/torch/multiprocessing/reductions.py", line 48, in __del__
+  File "/home/cdhernandez/local/pytorch/torch/storage.py", line 925, in _free_weak_ref
+AttributeError: 'NoneType' object has no attribute '_free_weak_ref'
+
+real	2m32.941s
+user	40m43.119s
+sys	2m21.709s
+quant+compiled max optimize.log
+/home/cdhernandez/local/miniconda3/envs/pytorch/lib/python3.10/site-packages/pydantic/_migration.py:282: UserWarning: `pydantic.utils:Representation` has been removed. We are importing from `pydantic.v1.utils:Representation` instead.See the migration guide for more details: https://docs.pydantic.dev/latest/migration/
+  warnings.warn(
+Loading model ...
+Time to load model: 25.92 seconds.
+Global seed set to 1234
+LLaMA(
+  (lm_head): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=32000, bias=False)
+  (transformer): ModuleDict(
+    (wte): Embedding(32000, 4096)
+    (h): ModuleList(
+      (0-31): 32 x Block(
+        (rms_1): RMSNorm()
+        (attn): CausalSelfAttention(
+          (c_attn): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=12288, bias=False)
+          (c_proj): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=4096, bias=False)
+        )
+        (rms_2): RMSNorm()
+        (mlp): MLP(
+          (c_fc1): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=11008, bias=False)
+          (c_fc2): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=11008, bias=False)
+          (c_proj): DynamicallyPerAxisQuantizedLinear(in_features=11008, out_features=4096, bias=False)
+        )
+      )
+    )
+    (ln_f): RMSNorm()
+  )
+  (kv_caches): KVCacheAggregator(
+    (kv_caches): ModuleList()
+  )
+)
+Time for inference 1: 98.43 sec total, 2.03 tokens/sec
+Time for inference 2: 1.64 sec total, 121.59 tokens/sec
+Time for inference 3: 1.46 sec total, 136.85 tokens/sec
+Time for inference 4: 1.46 sec total, 136.82 tokens/sec
+Time for inference 5: 1.46 sec total, 136.84 tokens/sec
+Time for inference 6: 1.46 sec total, 136.85 tokens/sec
+Time for inference 7: 1.46 sec total, 136.87 tokens/sec
+Time for inference 8: 1.46 sec total, 136.86 tokens/sec
+Time for inference 9: 1.46 sec total, 136.85 tokens/sec
+STAGE:2023-08-14 21:23:38 4087593:4087593 ActivityProfilerController.cpp:312] Completed Stage: Warm Up
+STAGE:2023-08-14 21:23:39 4087593:4087593 ActivityProfilerController.cpp:318] Completed Stage: Collection
+STAGE:2023-08-14 21:23:39 4087593:4087593 ActivityProfilerController.cpp:322] Completed Stage: Post Processing
+Hello, my name is Iris, and I am a New Yorker by birth, though I have lived in other parts of the. I am a grandmother of five, and I have many, many, many, many memories of working in the studio. I was the main breadwinner in the family until the kids were able to go to school. I use to have three secretaries, and we worked together. My family was very happy with the financial benefits and the flexible hours. I am now currently working from home, and I need to make some additional income.
+Hi, my name is Myrtle. I am 33 years old, and I am a single Mom of two. I live in a small town in the United States, and I have a little girl who is four years old and a son who will be three years old soon. One of my children has family in the United States. Unfortunately, I was laid off from my job, and I found a temporary job at a
+Bandwidth achieved: 13.96 GB/s
+Hello, my name is Tom and I am a recovering alcoholic and addict. If you have watched The Mowgli's YouTube videos or listened to their music on YouTube, Spotify, or Pandora, you may have seen my face, which is why this is so important to me. I have come to a point in my recovery where I am ready to live a normal life, and at my age, this means having a job that I love and being able to work so that I can make money and spend it on the. This is why I'm a big fan of the band, and you could say that I'm a Mowgli. The Mowgli's have helped me so much and I want to help them, too.
+I have been thinking about how to make this happen without sounding like a complete dork, so I thought I'd start by asking you something. If you're reading this, it means that you have listened to their music on YouTube
+Bandwidth achieved: 835.61 GB/s
+Hello, my name is Hannah I am eighteen and I am currently a university student.
+I am a very open minded person and I work as an assistant with an artist.
+I absolutely love animals and I have a big soft spot (which I am happy to share with someone else) for puppies as I have a passion for dogs.
+I am also very sporty and I love watching football on TV or at a match!
+I am also a big fan of music and in my spare time I enjoy organizing music events with my mates and also attending some of them.
+I am a very easy going person and I am looking for someone who is ready to share life with me, and who wants a very special bond with someone.
+I am looking for someone who is very confident in himself as well as in his feelings and ready to share life with me.
+I am looking for someone who is confident and secure enough in himself to be able to have meaningful and deep conversations.
+I would also
+Bandwidth achieved: 940.47 GB/s
+Hello, my name is Jonathan. I am an English teacher and an American citizen. I have been teaching English for over 2,000 hours to students who want to improve their English language proficiency and their confidence in speaking to others. I have been teaching English in Korea for 10 years and know the Korean language and culture well.
+I know how hard it can be to learn English while living in a country where it is not the native language. I can help you learn the language.
+In addition to being a teacher, I also have Bachelor's and Master's degrees in Computer Science and I am a successful programmer, which gives me the ability to teach people how to use computers and programs like Microsoft Office. I also have experience in teaching in high schools and I have taught English to adults from other countries.
+I teach you English or help you learn how to use computers at the time you want, on the schedule you want, and at the pace you want. I'm
+Bandwidth achieved: 940.27 GB/s
+Hello, my name is Martin Rotherham. I am an associate in the. The history of the firm began in with the founding of the original office in Edinburgh, Scotland.
+The following year, Peter, representing the firm, joined the American Bar Association.
+In order to gain a deeper understanding of the legal system, he went on to study at the. Some of our favorite pieces of art inspired our logo and website. The firm’s. DTI (Data-Driven Business) - Learn more about how CMMI and ITIL - and the need for IT to demonstrate value to the business.
+The Data Science degree focuses on the development of analytical skills, leadership, and a business-oriented technology mindset.
+In the first three quarters of the previous yearof the main investment projects carried out in the industrial sector of the countryamounted to 5.
+Deutsche Bank has been ranked first as the largest securities dealer among international banks in Russia for the first quarter ofby
+Bandwidth achieved: 940.43 GB/s
+Hello, my name is Chris and I am a bit of a car nut. Over the20 years I have driven more than 100 different cars and have always enjoyed them. I have decided to share my love of cars by running a blog where I write about cars and their history.
+I hope you enjoy my blog and hope you find it interesting and informative.
+Please feel free to comment on posts and share your experiences of the, or even get in touch with me for more information. margin-top: 10px; margin-bottom: 10px; } } #mc_embed_signup{ color: #1A2C3E; background-color: #fff; } #mc_embed_signup input#mce-EMAIL3{ border-radius: 15px; width: 250px; box-shadow: none; padding: 6px 7px 1px 7px
+Bandwidth achieved: 940.54 GB/s
+Hello, my name is Jason Fritsch. I first arrived in the1995, became a full member in 2002, and have been a part of the team since 2006. During my time on the team I have been in charge of a few different events, from photography to webmaster. I have also held a variety of leadership roles including Vice President, Webmaster, Community Ambassador, and eventually elected Secretary.
+This post is an introduction to the life of a team captain.
+As a team captain, you are responsible for the team's entire existence. As such, there is a lot on your plate. So, what are some things you need to do to succeed as a Team Captain?
+For a team that prides itself on how we work together, being a Team Captain is a lot like being a parent. You start off with just one child, and then you end up with three, four, or more. Your job is to focus on
+Bandwidth achieved: 940.62 GB/s
+Hello, my name is Brian and I am one of the. I am a 2015 graduate from the University of Charleston with a Bachelor's Degree in Civil Engineering. I became a Professional Engineer in 2019.
+Hello, my name is Brian and I am one of the structural engineers on the firm. I am a 2015 graduate from the University of Charleston with a Bachelor's Degree in Civil Engineering. I became a Professional Engineer in 2019. I have a wide range of experience with projects such as: commercial, custom homes, multi-family residential, county government, and industrial.
+I am excited to be a part of the team and continue to learn more about the industry. move from Texas to Indiana in 2009. In my free time I enjoy spending time with my wife and two kids, hunting, fishing, and playing sports. Strategically targeting the human immune system has been a dream of mine since university,
+Bandwidth achieved: 940.58 GB/s
+Hello, my name is David and I’m from Portland, OR. I am 2.21 feet tall. I like to do stuff and not do stuff. I like to do stuff I don’t do. Mostly I like to talk about things I do like. I do lots of different things. I listen to hip-hop. I like to listen to hip-hop. I like to eat. I like to eat food. I like to like things and think about things I like. I also like to hate things and think about hate. I like to write or not write about a lot of things. I like to write or not write about a lot of things. I like to make jokes or not make jokes. I like to make jokes. I don’t make jokes. I like to make jokes. I like to make jokes everybody should know about. You should know about those jokes. I like to make jokes about other people not making jokes about other people making jokes. I like
+Bandwidth achieved: 940.49 GB/s
+Time for inference 10: 7.70 sec total, 25.97 tokens/sec
+Memory used: 14.67 GB
+Hello, my name is JoAnn and I'm a Mommyof 3! I have 3 beautiful children and 1,000+ followers on Instagram and over 2,000 YouTube subscribers! I started my YouTube channel to document our PERSONAL family life at home, but also to share my passion for all things BABY. I've had so much fun sharing all of our experiences and growing our YouTube channel along the way! I love to encourage moms daily, as it has been the greatest blessing of motherhood!
+My goal is to work with an ethical brand that has a great message so that I can share it with my loyal community of followers. I am looking for a product that I LOVE, and will help me deliver on that goal.
+I'm looking for a company that believes in the same values as I do! I love to share authentic stories and the highs and lows of my life with my community to say, "It'
+Bandwidth achieved: 178.49 GB/s
+Exception ignored in: <function StorageWeakRef.__del__ at 0x7fd45d6915a0>
+Traceback (most recent call last):
+  File "/home/cdhernandez/local/pytorch/torch/multiprocessing/reductions.py", line 48, in __del__
+  File "/home/cdhernandez/local/pytorch/torch/storage.py", line 925, in _free_weak_ref
+AttributeError: 'NoneType' object has no attribute '_free_weak_ref'
+
+real	2m33.706s
+user	39m40.976s
+sys	2m17.962s
+compiled.log
+/home/cdhernandez/local/miniconda3/envs/pytorch/lib/python3.10/site-packages/pydantic/_migration.py:282: UserWarning: `pydantic.utils:Representation` has been removed. We are importing from `pydantic.v1.utils:Representation` instead.See the migration guide for more details: https://docs.pydantic.dev/latest/migration/
+  warnings.warn(
+Loading model ...
+Time to load model: 26.33 seconds.
+Global seed set to 1234
+LLaMA(
+  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+  (transformer): ModuleDict(
+    (wte): Embedding(32000, 4096)
+    (h): ModuleList(
+      (0-31): 32 x Block(
+        (rms_1): RMSNorm()
+        (attn): CausalSelfAttention(
+          (c_attn): Linear(in_features=4096, out_features=12288, bias=False)
+          (c_proj): Linear(in_features=4096, out_features=4096, bias=False)
+        )
+        (rms_2): RMSNorm()
+        (mlp): MLP(
+          (c_fc1): Linear(in_features=4096, out_features=11008, bias=False)
+          (c_fc2): Linear(in_features=4096, out_features=11008, bias=False)
+          (c_proj): Linear(in_features=11008, out_features=4096, bias=False)
+        )
+      )
+    )
+    (ln_f): RMSNorm()
+  )
+  (kv_caches): KVCacheAggregator(
+    (kv_caches): ModuleList()
+  )
+)
+Time for inference 1: 57.33 sec total, 3.49 tokens/sec
+Time for inference 2: 2.07 sec total, 96.74 tokens/sec
+Time for inference 3: 2.07 sec total, 96.80 tokens/sec
+Time for inference 4: 2.07 sec total, 96.74 tokens/sec
+Time for inference 5: 2.07 sec total, 96.84 tokens/sec
+Time for inference 6: 2.06 sec total, 96.87 tokens/sec
+Time for inference 7: 2.06 sec total, 96.88 tokens/sec
+Time for inference 8: 2.06 sec total, 96.85 tokens/sec
+Time for inference 9: 2.06 sec total, 96.87 tokens/sec
+Hello, my name is Iris, and I am a New York City based photographer. My photography primarily focuses on people, places and things.
+I have been doing photography for over 10 years as my primary source of income. My work has been published internationally in various art publications, as well as the International Photography Awards and The Julia Margaret Cameron Awards. I have also been published by the New York Daily News and in a book about street art. I have worked with various art groups, including Art4Art and the Lower East Side Printshop, photographing members of the community and their work. My work has been featured in group exhibitions, and has sold through various art galleries and art shows.
+I am currently available for freelance work.
+- My work has been published in numerous magazines, art publications, and art shows, including 'Inside' Magazine, Manhattan Arts Magazine, The Brooklyn Rail, the German book 'Street Art Germany', and at the Art Basel 2010 show
+Bandwidth achieved: 47.01 GB/s
+Hello, my name is Tom and I am a happy human being! I am a typical Australian who can be found going to the beach and chasing sunsets over the ocean. I am a lover of nature and outdoors as well as a fan of animals. I enjoy creating art and am passionate about sharing my creations in a positive way to keep creativity alive. I first started art at a very young age and have been creating and drawing all my life. This led me to create my own business as a freelance graphic designer/illustrator as well as my own art gallery in 2010. I have experience in a wide range of styles and mediums but I love to work with Acrylics, Watercolours, Collage and Digital. Please visit my website to see all that I have to offer!
+I never really had the money to buy art supplies as I was growing up so I always had to make do with what I had on hand. This led to me being a great DIY-er
+Bandwidth achieved: 1303.76 GB/s
+Hello, my name is Hannah I am eighteen and I am currently a university student.
+I am a social media guru.
+I work as an assistant with an artist.
+I am a student of Sociology and Criminology.
+I am a model for a modelling agency.
+I am a regular blogger of my opinions on mental health and relationships.
+I am founder of a non-profit organisation that aims to improve mental health in secondary schools.
+I am a fashion designer who is working towards a career in fashion.
+I am a director. I am currently in the process of filming a short film.
+I am an actor. I am currently working on a project that will be released in June.
+I am a writer. I have written and published a book.
+I am a student. I am a Psychology major.
+I am a singer. I have performed for the last five years.
+I am a dancer. I have danced for the last three years.
+I am
+Bandwidth achieved: 1304.55 GB/s
+Hello, my name is Jonathan. I am an English teacher and an American expat living in Sao Paulo, Brazil. I am also the host of the Brazilian Portuguese podcast, Portuguese for Brazilians. In this podcast, I focus on Brazilian Portuguese, the second most spoken language in the Americas. If you are interested in Brazil, and interested in learning Portuguese, this is your podcast!
+Listeners of Portuguese for Brazilians, please visit www.portugueseforbrazilians.com. </p>
+			<p>A new episode of the show will be posted each week, usually on Sundays. The show is available on iTunes (Android Podcasts here soon), as well as, on the website. </p>
+			<p>Please leave a review on iTunes, if you would like, and you can also sign up for the newsletter on the website </p>
+			<p>You can contact me and my guest on the website,
+Bandwidth achieved: 1303.70 GB/s
+Hello, my name is Martin Rotherham. I am an associate in the Commercial Litigation team at Berry Smith.
+I have been involved in a wide variety of commercial litigation including debt recovery, contractual disputes, shareholder disputes, banking and professional negligence claims, as well as breach of confidence.
+I also have a wide general common law litigation practice, having acted in cases in the High Court and County Court in England and Wales.
+I have experience in dealing with banks and lending institutions, having acted for banks and borrowers in banking litigation, including drafting letters of demand and litigation proceedings, providing advice on contractual disputes and advising on the enforcement of security.
+I have an interest in sports law and am a member of the Football Association Intermediary Committee and the former Chairman of the Cardiff City Supporters’ Trust. power sage
+A woman has been convicted of raping a teenage girl with intellectual disability.
+Inspired by a real California case I include this chapter from my novel, The Dead Girls.
+Bandwidth achieved: 1305.14 GB/s
+Hello, my name is Chris and I am a bit of a car nut. Over the years I have owned a few cars and from time to time shared them with friends.
+For the last three years I have owned a 1976 Ford Capri 2.8i. This car is a good example of how you can buy a car for a good price and make it very nice. However, it is getting a bit tired and I have decided to sell it.
+In the meantime I own a 2013 Jeep Wrangler Rubicon Unlimited, which I have had since new.
+I would like to sell the Capri to a person that is also a car nut. If you are interested drop me a message and we can have a chat. architec-1975.com (Must type the L's in blue), this is a very nice country-style home with 4 bedrooms, 2.5 baths, screened porch plus
+Bandwidth achieved: 1305.55 GB/s
+Hello, my name is Jason Fulton. I first arrived in Los Angeles in 2008 after graduating from the University of North Carolina at Greensboro with a BFA in Graphic Design. Since then I have been making a living as a designer and illustrator in Los Angeles, creating posters, record art, and book covers for clients in the Los Angeles area. I am currently represented by The District Agency.
+Over the years I have been fortunate enough to work with clients such as B9 Studio, The Orchard, TuneCore, and more. It’s my intention that the work I do for you will not only help promote and advertise your product, but also to make it a piece of art.
+More info: https://thedistrictagency.com/artists/jason-fulton/
+Check out my illustration portfolio
+Jason Fulton
+Art & Design | Branding & Marketing
+Live & Let Die | Film Score | LP Release
+This
+Bandwidth achieved: 1305.64 GB/s
+Hello, my name is Brian and I am one of the co-founders of The Gifted.
+I am the director of The Gifted. I am a graduate of the University of Michigan with a Bachelor of Arts degree in Theater.
+Hello, my name is Amy and I am one of the co-founders of The Gifted.
+I am a graduate of Michigan State University with a B.A. in Elementary Education.
+I am one of the co-founders of The Gifted. I have a B.A. in Theater, and a minor in Music, from Michigan State University.
+Hello, my name is Lindsay and I am one of the co-founders of The Gifted.
+I am a graduate of Michigan State University with a B.A. in Psychology.
+I am one of the co-founders of The Gifted. I am a graduate of Eastern Michigan University with a B.A. in Secondary Education.
+I am one of the
+Bandwidth achieved: 1305.27 GB/s
+Hello, my name is David and I am a full-time freelance motion designer who creates a wide range of motion graphics for the online world.
+I offer you the following: a fun, creative work environment, an excellent career path & a chance to make a great living from your passions.
+My years of commercial experience in the animation industry have given me an in-depth understanding of the animation process across many different platforms. I have also worked extensively on creating, designing & creating motion graphics across many different media & have worked in many different roles, so I am extremely adaptable.
+Whether you are a motion graphics designer, animation designer, or an artist looking to move into this field, I would love to hear from you.
+I am always happy to talk at any time.
+I am currently looking for a few clients to create a new video series for an Australian brand. If you are interested in this opportunity, please contact me.
+Please note that if I am not currently working on any projects
+STAGE:2023-08-14 21:25:36 4150994:4150994 ActivityProfilerController.cpp:312] Completed Stage: Warm Up
+STAGE:2023-08-14 21:25:38 4150994:4150994 ActivityProfilerController.cpp:318] Completed Stage: Collection
+STAGE:2023-08-14 21:25:38 4150994:4150994 ActivityProfilerController.cpp:322] Completed Stage: Post Processing
+Time for inference 10: 8.06 sec total, 24.81 tokens/sec
+Memory used: 13.78 GB
+Bandwidth achieved: 1305.54 GB/s
+Hello, my name is JoAnn and I'm a Mommyof 3! I have 3 beautiful children and 1 beautiful husband. I love to read, garden, cook, and do all kinds of crafts! I'm also an artist and love to paint and draw. I'm obsessed with all things Disney, especially Disney Princesses and the Marvel Avengers!
+My home is filled with Disney, Disney princesses, Marvel, my hubby, my kids, and a few other things.
+I look forward to sharing all kinds of things with you!
+Great news, I'm now hosting giveaways for you guys so be sure to check out the giveaway tab for all of the latest giveaways!
+If you have a giveaway to promote, I'd love to hear about it! I am mostly interested in beauty, fashion, and home decor giveaways. Bristle Brush Giveaway! Read this post to know more knowledge about Bristle Brush!
+
+Bandwidth achieved: 334.31 GB/s
+Exception ignored in: <function StorageWeakRef.__del__ at 0x7f4ef6991480>
+Traceback (most recent call last):
+  File "/home/cdhernandez/local/pytorch/torch/multiprocessing/reductions.py", line 48, in __del__
+  File "/home/cdhernandez/local/pytorch/torch/storage.py", line 925, in _free_weak_ref
+AttributeError: 'NoneType' object has no attribute '_free_weak_ref'
+
+real	1m58.429s
+user	38m47.437s
+sys	2m20.979s
+quant+no_compile.log
+/home/cdhernandez/local/miniconda3/envs/pytorch/lib/python3.10/site-packages/pydantic/_migration.py:282: UserWarning: `pydantic.utils:Representation` has been removed. We are importing from `pydantic.v1.utils:Representation` instead.See the migration guide for more details: https://docs.pydantic.dev/latest/migration/
+  warnings.warn(
+Loading model ...
+Time to load model: 27.07 seconds.
+Global seed set to 1234
+Time for inference 1: 9.93 sec total, 20.14 tokens/sec
+Time for inference 2: 9.17 sec total, 21.81 tokens/sec
+Time for inference 3: 9.17 sec total, 21.80 tokens/sec
+Time for inference 4: 9.17 sec total, 21.81 tokens/sec
+Time for inference 5: 9.17 sec total, 21.81 tokens/sec
+Time for inference 6: 9.17 sec total, 21.81 tokens/sec
+Time for inference 7: 9.17 sec total, 21.81 tokens/sec
+Time for inference 8: 9.17 sec total, 21.81 tokens/sec
+LLaMA(
+  (lm_head): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=32000, bias=False)
+  (transformer): ModuleDict(
+    (wte): Embedding(32000, 4096)
+    (h): ModuleList(
+      (0-31): 32 x Block(
+        (rms_1): RMSNorm()
+        (attn): CausalSelfAttention(
+          (c_attn): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=12288, bias=False)
+          (c_proj): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=4096, bias=False)
+        )
+        (rms_2): RMSNorm()
+        (mlp): MLP(
+          (c_fc1): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=11008, bias=False)
+          (c_fc2): DynamicallyPerAxisQuantizedLinear(in_features=4096, out_features=11008, bias=False)
+          (c_proj): DynamicallyPerAxisQuantizedLinear(in_features=11008, out_features=4096, bias=False)
+        )
+      )
+    )
+    (ln_f): RMSNorm()
+  )
+  (kv_caches): KVCacheAggregator(
+    (kv_caches): ModuleList()
+  )
+)
+Hello, my name is Iris.
+My name is Iris. I am 14 years old. I want to paint. I paint from my heart and I enjoy to make art. You can find me in my school time. I am going to high school now. I like it very much! I want to learn to draw. I am good at drawing and I really enjoy to make art and also like to paint. I also love to dance. I like to go to parties. I have a lot of friends. My friends are kind and nice and we always have fun. I like with my friends to go to the movies. I also like to read. I like to play with my friends. I like to go running. I like to go to the gym. I like to play tennis. I have a lot of pets. I have a dog and a cat. I also have a fish. I have a rabbit. contempt for those who have made the sign of the cross and rec
+Bandwidth achieved: 138.44 GB/s
+Hello, my name is Tomás. I am 24 years old and I am a student of Medicine at the Autonomous University of the State of Mexico.
+I met the Foundation on March 9, 2018. I was already a little concerned about my hair, as I had started to notice a little alopecia. At the time, I was in the 3rd year of medical school, and every time I went to class the professors commented that I was losing my hair. I had a bad feeling, but you have to deal with everything that life brings.
+September 2018 I decided to start a new hair transplant program, but that month I lost more hair. By that time, I had already spent a lot of money on those programs.
+I went to the hair clinic to ask questions, I learned a lot, and then I decided to do the rejuvenation program. At that time I had already bought the hair transplant program that I
+Bandwidth achieved: 149.86 GB/s
+Hello, my name is Hannah and I'm 17 years old. I live in Columbus, GA by myself and am currently in my junior year of high school. During the summer I volunteer at a church in Columbus and I work at a local animal shelter. I am taking online classes in order to graduate a year early. I am very creative and like to read, write, and play the piano. I love to write about my personal experiences and thoughts, as well as fictional things and fictional people. I enjoy watching movies and shows on Netflix. Anyways, thanks for visiting my little page and I hope you will come back often. worse and worst in the world. It’s not easy to do, but it’s not easy to be a parent either.
+The best thing about being a parent is that it’s an opportunity to have a positive impact on someone’s life. If a child has a strong and stable foundation, they’re more likely to be successful in life.
+Bandwidth achieved: 149.85 GB/s
+Hello, my name is Jonathan and I am a poet, a philosopher, a writer, and a thinker.
+So to anyone that has been reading my blog for even a little bit, you know that I am a very analytical person. I consider a lot of things, people, and things that happen to me, etc, and try to come up with a conclusion or an answer or make an explanation of the things I see or hear.
+I also try to see the big picture, even though sometimes I can't see it. I want to understand everything as if I were to be able to understand the whole world, but I can't do that.
+I have been thinking a lot about some of the topics of what I write about in my blogs and in my blog posts and what I write about in my poetry and what I write about in my 'story' ideas.
+I have been thinking about my place in the world, what is needed in this world, and what is not needed
+Bandwidth achieved: 149.86 GB/s
+Hello, my name is Martin Steffens.
+I am co-founder and CEO of a number of companies on three continents.
+I’m German, by the way.
+I began my life as a musician.
+However, I was never able to quit my day job, working as an IT consultant.
+I’m a multidisciplinary individual.
+I’m an entrepreneur.
+I’m a consultant.
+I’m a director.
+I’m a musician.
+I’m a family man.
+I’m a German.
+For the time being, you will find below a few projects I have been a part of.
+Please do not hesitate to reach out via LinkedIn.
+I am a co-founder of the Berlin-based startup “Treofan” (from 2001 to 2011).
+Treofan is the global leader in label-free DNA.
+I launched the company in 20
+Bandwidth achieved: 149.87 GB/s
+Hello, my name is Chris Edwards. I am a professional wedding photographer based in Sussex.
+I have a really fun, laid back approach to wedding photography. As such, I’m very easy to get along with and you’ll find me easy to talk to. I love to make people feel at ease and I pride myself on making my couples feel special.
+I started shooting weddings in 1998 and have been taking wedding pictures ever since. I now shoot weddings throughout England, Wales and Europe.
+I’ve photographed thousands of couples in hundreds of weddings. I can’t tell you how many weddings I’ve been to but I do have a rough idea.
+Wedding photography is a true passion for me. I’m a professional wedding photographer because I love what I do.
+My style of wedding photography is light, fun and natural. I want to make sure you have a fantastic wedding day. I do this by capturing your wedding day exactly as it happens. With this
+Bandwidth achieved: 149.88 GB/s
+Hello, my name is Jason and welcome to my website, which I hope will inspire you to create beautiful works of art. As an artist I like to be inspired by my surroundings, with the many colors and shapes that make up the earth’s beautiful landscapes and I hope to share the beauty of nature with you, through my paintings, drawings and prints.
+I create in a variety of media, including oil paints, acrylic paints, watercolor, inks, pencil and various mixed media. Bristow House is a traditional country house, set in attractive landscaped gardens with views across the lake, and is surrounded by parkland. Its thatched roof and pretty gardens are a delight for those who enjoy the countryside.
+Its ideal for walkers, horse riders and cyclists. The surrounding countryside is ideal for picnics and is great for wildlife and nature lovers – the house is full of resident Robins and a wide variety of other bird species, while the gardens are home to a variety of interesting and
+Bandwidth achieved: 149.88 GB/s
+Hello, my name is Brian.
+I am a self-taught graphic artist and illustrator, with a passion for creating logos, icons, illustrations and illustrations, as well as various art forms.
+I love creating logos, icons and illustrations.
+I have a wide portfolio of work, spanning a wide variety of industries, clients and art forms.
+I can handle any project and am always happy to work on any project, no matter how big or small.
+I am passionate about combining beautiful typography, clean lines and subtle elements.
+I have a varied experience working with different mediums and art forms.
+I am always happy to work with my clients, to ensure their satisfaction and unique vision is met.
+I am always available and happy to answer any questions.
+If you have any questions, please do not hesitate to contact me. I am always happy to help.
+I work in a wide variety of mediums and art forms. Below are some of the art forms I have experience
+Bandwidth achieved: 149.89 GB/s
+Time for inference 9: 9.17 sec total, 21.81 tokens/sec
+STAGE:2023-08-14 21:27:43 4108:4108 ActivityProfilerController.cpp:312] Completed Stage: Warm Up
+STAGE:2023-08-14 21:27:58 4108:4108 ActivityProfilerController.cpp:318] Completed Stage: Collection
+STAGE:2023-08-14 21:27:59 4108:4108 ActivityProfilerController.cpp:322] Completed Stage: Post Processing
+Time for inference 10: 143.39 sec total, 1.39 tokens/sec
+Memory used: 14.67 GB
+Hello, my name is David!
+I’m the senior web developer of Zephyr and I love pizza.
+I am an experienced web developer, having worked for several clients in the past that range from small start-ups, to large international companies.
+I have a passion for web development and love pushing the boundaries of modern technologies.
+I have a keen eye for detail, and am focused on quality over quantity.
+With a broad range of experience I hope to bring something unique to your project.
+I have a keen eye for detail, and am focused on quality over quantity. With a broad range of experience I hope to bring something unique to your project.
+Get in touch, and I’ll get back to you as soon as possible.monywiwu.pe.feedback@yahoo.com
+Designing a world class magazine
+Digital is where business is going. For many publishing companies, adopting digital technology was a difficult decision, but it is changing the
+Bandwidth achieved: 149.87 GB/s
+Hello, my name is João Pais and this is my official website. Here you will find everything you need to know about me and my work.
+I create websites, UI elements and much more. I love working with great people and I always want to do high quality work.
+Hi! My name is João Pais and I am a creative web developer. I also love drawing, painting and designing, and I write articles. I love to use different styles and work with different technologies. I am a true artist. Leah is my wife and "The Boss" of B & L.
+Her name is Leah. She is the Boss.
+I am a Mechanical Engineer by trade. I have worked in the automotive industry for 17 years and have done everything from engineering and design to manufacturing and product management to being a part of the sales team and now the marketing team. In addition to working at a few automotive parts companies, I have owned my own small business, an automotive parts
+Bandwidth achieved: 9.59 GB/s
+
+real	4m29.812s
+user	43m2.339s
+sys	2m17.300s
+compiled.log max-optimize
+/home/cdhernandez/local/miniconda3/envs/pytorch/lib/python3.10/site-packages/pydantic/_migration.py:282: UserWarning: `pydantic.utils:Representation` has been removed. We are importing from `pydantic.v1.utils:Representation` instead.See the migration guide for more details: https://docs.pydantic.dev/latest/migration/
+  warnings.warn(
+Loading model ...
+Time to load model: 28.25 seconds.
+Global seed set to 1234
+LLaMA(
+  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+  (transformer): ModuleDict(
+    (wte): Embedding(32000, 4096)
+    (h): ModuleList(
+      (0-31): 32 x Block(
+        (rms_1): RMSNorm()
+        (attn): CausalSelfAttention(
+          (c_attn): Linear(in_features=4096, out_features=12288, bias=False)
+          (c_proj): Linear(in_features=4096, out_features=4096, bias=False)
+        )
+        (rms_2): RMSNorm()
+        (mlp): MLP(
+          (c_fc1): Linear(in_features=4096, out_features=11008, bias=False)
+          (c_fc2): Linear(in_features=4096, out_features=11008, bias=False)
+          (c_proj): Linear(in_features=11008, out_features=4096, bias=False)
+        )
+      )
+    )
+    (ln_f): RMSNorm()
+  )
+  (kv_caches): KVCacheAggregator(
+    (kv_caches): ModuleList()
+  )
+)
+Time for inference 1: 94.95 sec total, 2.11 tokens/sec
+Time for inference 2: 2.16 sec total, 92.67 tokens/sec
+Time for inference 3: 2.05 sec total, 97.36 tokens/sec
+Time for inference 4: 2.05 sec total, 97.43 tokens/sec
+Time for inference 5: 2.05 sec total, 97.37 tokens/sec
+Time for inference 6: 2.05 sec total, 97.42 tokens/sec
+Time for inference 7: 2.05 sec total, 97.46 tokens/sec
+Time for inference 8: 2.05 sec total, 97.46 tokens/sec
+Hello, my name is Iris, and I am a New York City based photographer. My photography primarily focuses on people, places and things.
+I have been doing photography for over 10 years as my primary source of income. My work has been published internationally in various art publications, as well as the International Photography Awards and The Julia Margaret Cameron Awards. I have also been published by the New York Daily News and in a book about street art. I have worked with various art groups, including Art4All and the Lower East Side Printshop, photographing members of the community and their work. My work has been featured in group exhibitions, and has sold through various art galleries and art shows.
+I am currently available for freelance work.
+- My work has been published in numerous magazines, art publications, and art shows, including 'Inside' Magazine, Manhattan Arts Magazine, The Brooklyn Rail, the German book 'Street Art Germany', and at the Art Basel 2010 show
+Bandwidth achieved: 28.39 GB/s
+Hello, my name is Tom and I am a happy human being! I am a typical Australian who can be found going to the beach and chasing sunrises, but I also love to be in the mountains and the bush. I am an adventurer at heart and I also love to be outside doing physical activities.
+I am a web developer that focuses firstly on user experience and secondly on user interface. I have been working on web development for over 15 years and have extensive experience in the field. I want to create a web presence that is not generic and that has a real focus on the people using it. move your website up together.
+I work with all types of businesses, from small, home-based businesses through to larger corporate entities. I have extensive experience in working with small to large businesses, which makes me the ideal person to move your website up together.
+My goal is to make you successful by making your business successful. I want to work with you to build a
+Bandwidth achieved: 1248.95 GB/s
+Hello, my name is Hannah I am eighteen and I am currently a university student.
+I am a social butterfly and love meeting new people. I am an outgoing and bubbly girl, everyone always comments how much they enjoy my company (which I am so grateful for).
+I am a great listener as I love to just sit back and listen to people talk.
+I am open minded, I am not one of those people who expects their partners to act a certain way or in a certain manner. I am very much relaxed when it comes to people and would love to meet someone who is too. I am very much an open book, I like to live what life I can, and I have a very positive outlook on life. I do of course have my down days but those are spent reflecting. I always know where I want to be in life and what I do want for myself and I think that is an important quality to have.
+I have a bubbly personality and a very loud
+Bandwidth achieved: 1312.05 GB/s
+Hello, my name is Jonathan. I am an English teacher and an American expat living in Sao Paulo, Brazil. I am also the host of the Brazilian Portuguese podcast, Portuguese for Brazilians. In this podcast, I focus on Brazilian Portuguese, the second most spoken language in the Americas. If you are interested in Brazil, and interested in learning Portuguese, this is your podcast!
+Listeners of Portuguese for Brazilians, please visit www.portugueseforbrazilians.com. </p>
+			<p>A new episode of the show will be posted each week, usually on Sundays. The show is available on iTunes (Android Podcasts here soon), as well as, on the website. </p>
+			<p>Please leave a review on iTunes, if you would like, and you can also sign up for the newsletter on the website </p>
+			<p>You can contact me and my guest on the website,
+Bandwidth achieved: 1313.00 GB/s
+Hello, my name is Martin Rotherham. I am an associate in the Commercial Litigation team at Berry Smith.
+I have been involved in a wide variety of commercial litigation including debt recovery, contractual disputes, shareholder disputes, banking and professional negligence claims, as well as breach of confidence.
+I also have a wide general common law litigation practice, having acted in cases in the High Court and County Court in England and Wales.
+I have experience in dealing with banks and lending institutions, having acted for banks and borrowers in banking litigation, including drafting letters of demand and litigation proceedings, providing advice on contractual disputes and advising on the enforcement of security.
+I have an interest in sports law and am a member of the Football Association Intermediary Committee and the former Chairman of the Cardiff City Supporters’ Trust. power sage
+A woman has been convicted of raping a teenage girl with intellectual disability.
+Inspired by a real California case I include this chapter from my novel, The Dead Girls.
+Bandwidth achieved: 1312.28 GB/s
+Hello, my name is Chris and I am a bit of a car nut. Over the years I have owned a few cars and from time to time shared them with friends.
+For the last three years I have owned a 1976 Ford Capri 2.8i. This car is a good example of how you can buy a car for a good price and make it very nice. However, it is getting a bit tired and I have decided to sell it.
+In the meantime I own a 2013 Jeep Wrangler Rubicon Unlimited, which I have had since new.
+I would like to sell the Capri to a person that is also a car nut. If you are interested drop me a message and we can have a chat. architec-1975.com (Must type the L's in blue), this is a very nice country-style home with 4 bedrooms, 2.5 baths, screened porch plus
+Bandwidth achieved: 1312.96 GB/s
+Hello, my name is Jason Fulton. I first arrived in Los Angeles in 2008 after graduating from the University of North Carolina at Greensboro with a BFA in Graphic Design. Since then I have been making a living as a designer and illustrator in Los Angeles, creating posters, record art, and book covers for clients in the Los Angeles area. I am currently represented by The District Agency.
+Over the years I have been fortunate enough to work with clients such as B9 Studio, The Orchard, TuneCore, and more. It’s my intention that the work I do for you is not only an extension of your vision, but one that also creates a unique piece of art.
+More info: https://thedistrictagency.com/artists/jason-fulton/
+Check out my illustration portfolio
+Jason Fulton
+Art & Design | Branding & Marketing
+Live & Let Die | Film Score | LP Release
+This
+Bandwidth achieved: 1313.39 GB/s
+Hello, my name is Brian and I own this website. I hope you enjoy your stay. Thank you for your time.
+Brian R. Cook
+Follow Brian
+The "Un-Ripped" Naked Truth
+The Nude 2000
+One thing that has really changed for me, and for many of us, is how my body has changed. In my late teens to mid-twenties I was a little extra endowed. My body is fairly symmetrical with a little bigger than average breasts, hips, buttocks, shoulders, and chest. Then my breasts grew to the point where I had to buy a full size bra. The weight of the breasts alone was enough that I couldn't find a bra that fit me that I liked. My hips and buttocks became bigger than they were, and my shoulders and chest widened. I was a full 3XL, 272 pounds. I did not have a single dress that fit me
+Bandwidth achieved: 1313.44 GB/s
+Time for inference 9: 2.05 sec total, 97.47 tokens/sec
+STAGE:2023-08-14 21:32:43 114742:114742 ActivityProfilerController.cpp:312] Completed Stage: Warm Up
+STAGE:2023-08-14 21:32:46 114742:114742 ActivityProfilerController.cpp:318] Completed Stage: Collection
+STAGE:2023-08-14 21:32:46 114742:114742 ActivityProfilerController.cpp:322] Completed Stage: Post Processing
+Time for inference 10: 8.11 sec total, 24.67 tokens/sec
+Memory used: 14.28 GB
+Hello, my name is David and I am a full-time freelance motion designer who creates a wide range of motion graphics for the online world.
+I offer you the following: a fun, creative work environment, an excellent career path & a chance to make a great living from your passions.
+My years of commercial experience in the animation industry have given me an in-depth understanding of the animation process across many different platforms. I have also worked extensively on creating, designing & creating motion graphics across many different media & have worked in many different roles, so I am extremely adaptable.
+Whether you are a motion graphics designer, animation designer, or an artist looking to move into this field, I would love to hear from you.
+I am always happy to talk at any time.
+I am currently looking for a few clients to create a new video series for an Australian brand. If you are interested in this opportunity, please contact me.
+Please note that if I am not currently working on any projects
+Bandwidth achieved: 1313.55 GB/s
+Hello, my name is JoAnn and I'm a Mommyof 3! I have 2 girls that have just entered the teen stage and a little boy who is 12 months old! I'm a stay at home mom, I work from home as well and have my business. I love to write, I love photography and I love to share my creativity with you all. I'm excited to be here and hope to meet you all and connect! DT member since 2019.
+A new challenge I have found on my travels in facebook is called Heartfelt Creations . They are a group of so many talented artists and I have so much fun looking through their work. I decided to join in on their monthly challenge. This month the theme is "Fall into Autumn" and I decided to do a project I've been wanting to do for a while now. I wanted to make a fun little mini album of all my favorite fall photos. And for the
+Bandwidth achieved: 332.48 GB/s
+Exception ignored in: <function StorageWeakRef.__del__ at 0x7f5290499480>
+Traceback (most recent call last):
+  File "/home/cdhernandez/local/pytorch/torch/multiprocessing/reductions.py", line 48, in __del__
+  File "/home/cdhernandez/local/pytorch/torch/storage.py", line 925, in _free_weak_ref
+AttributeError: 'NoneType' object has no attribute '_free_weak_ref'
+
+real	2m37.736s
+user	42m47.137s
+sys	2m26.125s
